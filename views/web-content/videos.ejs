@@ -23,7 +23,7 @@
         font-size: 11px;
         padding: 10px;">
 
-          <ul class="sidebar-nav" style="display: flex;flex-direction: row; width: 100%;">
+         <!--<ul class="sidebar-nav" style="display: flex;flex-direction: row; width: 100%;">
               <li class="active" >
                 <a href="/home"> <div class="icon-name" style="margin-bottom: 20px;box-shadow: none;"> 
                        <img class="sidebar-icons"  src="/icons/icons8-home-48.png"> 
@@ -56,68 +56,31 @@
                     </a> 
               </li>
           
-          </ul>
+          </ul>-->
     
      
     </div>
         <div class="container1"  style="width: 94%; height: 100%;" >
           <div class="container">
+            <% videos.forEach(video => { %>
             <div class="card">
-              <img src="/icons/wolf.PNG" alt="Card Image" class="card-image" />
+              <img src="<%= video.imageUrl %>" alt="Card Image" class="card-image" />
+          
               <div class="card-content">
-                <h3 class="card-title">Card Title</h3>
+                <h3 class="card-title"><%= video.title %></h3>
                 <p class="card-text">
-                  This is a simple card design with an image, title, and
-                  description.
+                 <%= video.description %>
                 </p>
-               
+                 <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                  <div><%= video.createdBy.username %></div>
+                  <div><%= new Date(video.createdAt).toLocaleDateString() %></div>
+                 
+                 </div>
               </div>
             </div>
-            <div class="card">
-              <img src="/icons/wolf.PNG" alt="Card Image" class="card-image" />
-              <div class="card-content">
-                <h3 class="card-title">Card Title</h3>
-                <p class="card-text">
-                  This is a simple card design with an image, title, and
-                  description.
-                </p>
-               
-              </div>
-            </div>
-            <div class="card">
-              <img src="/icons/wolf.PNG" alt="Card Image" class="card-image" />
-              <div class="card-content">
-                <h3 class="card-title">Card Title</h3>
-                <p class="card-text">
-                  This is a simple card design with an image, title, and
-                  description.
-                </p>
-               
-              </div>
-            </div>
-            <div class="card">
-              <img src="/icons/wolf.PNG" alt="Card Image" class="card-image" />
-              <div class="card-content">
-                <h3 class="card-title">Card Title</h3>
-                <p class="card-text">
-                  This is a simple card design with an image, title, and
-                  description.
-                </p>
-                
-              </div>
-            </div>
+            <%})%>
+        
   
-            <div class="card">
-              <img src="/icons/wolf.PNG" alt="Card Image" class="card-image" />
-              <div class="card-content">
-                <h3 class="card-title">Card Title</h3>
-                <p class="card-text">
-                  This is a simple card design with an image, title, and
-                  description.
-                </p>
-                
-              </div>
-            </div>
           </div>
        </div>
       </div>

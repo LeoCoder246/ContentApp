@@ -14,6 +14,7 @@ staticRouter.get('/dashboard',authMiddleware,(req, res) => { //adminMiddleware,
     if (!req.user) {
         return res.redirect('/login'); // 🔹 Redirect if no user
     }
+
     res.render('staticViews/dashboard', { user: req.user }); // ✅ Pass user data to view
 });
 

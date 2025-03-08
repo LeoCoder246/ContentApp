@@ -5,6 +5,6 @@ const authMiddleware = require('../middleware/authMiddleware');
 const adminMiddleware = require('../middleware/adminMiddleware');
 const Notice = require('../models/noticeModel');
 webcontentRouter.get('/videos', authMiddleware , webcontentController.getvideos);
-
+webcontentRouter.post('/video',authMiddleware , webcontentController.postVideo);
 webcontentRouter.post('/notice', authMiddleware, webcontentController.postnotice);
 module.exports = webcontentRouter;

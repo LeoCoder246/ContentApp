@@ -14,7 +14,7 @@
           </div>
           <%} else { %>
             <div class="nav-item">
-              <a  class="nav-link"><%= user.username %></a>
+              <a  ><%= user.username %></a>
             </div>
             <div class="nav-item">
               <a href="/register" class="nav-link">Register</a>
@@ -30,8 +30,8 @@
 </div>
 <div class="sidebar">
 
-      <ul class="sidebar-nav" style="padding-top: 50px;">
-          <li class="active">
+      <ul class="sidebar-nav" style="padding-top: 30px;">
+          <li class="active" style="border-top: 1px solid #ccc;">
             <a href="/home"> <div class="icon-name" > 
                    <img class="sidebar-icons"  src="/icons/icons8-home-48.png"> 
                       <div class="sidebar-text">HOME </div>
@@ -47,7 +47,7 @@
               </div>
             </a>
           </li>
-          <li class="active">
+          <li class="active" >
             <a href="/contact">
             <div class="icon-name" > 
                        <img class="sidebar-icons"  src="/icons/icons8-contact-us-50.png"> <div class="sidebar-text">CONTACT</div>

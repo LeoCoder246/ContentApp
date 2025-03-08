@@ -6,3 +6,6 @@ document.getElementById("toggleButton").addEventListener("click", function() {
     sidebar.style.display = "none"; // Hide
   }
 });
+
+
+
